@@ -12,6 +12,13 @@ Currently a work in progress (WIP)
 - magrittr (Bache & Wickham, 2020)
 - stringr (Wickham, 2019)
 
-# To install
+# Installation
 
-devtools::install_github("battenr/rwetasks")
+- the latest development versions from github: 
+
+```{r}
+install.packages("devtools")
+devtools::install("battenr/rwetasks")
+```
+
+
