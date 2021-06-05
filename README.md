@@ -1,6 +1,6 @@
 # Real-World Evidence (RWE) Tasks: rwetasks
 
-Theses are functions that I've created for working with large datasets such as real-world data (RWD). Includes functions for calculating number of individuals and 
+A package for working with large datasets such as real-world data (RWD). Includes functions for calculating number of individuals and 
 percentage, for different variables (ex: demographic variables, such as age or sex). Other functions include: cleaning a string, and calculating number of 
 unique individuals in a dataset. 
 
