@@ -7,6 +7,7 @@
 #'
 #' @return a dataframe with number and percent of each group
 count_percent <- function(df, x){
+  require(magrittr)
 
   x <- rlang::enquo(x)
 
@@ -38,7 +39,10 @@ count_percent <- function(df, x){
 #' @param pt_id patient identifier
 #'
 #' @return a dataframe with number and percent of each group
+#' @export
 count_percent_demo <- function(df, x, pt_id){
+  require(magrittr)
+
   x <- rlang::enquo(x)
   pt_id <- rlang::enquo(pt_id)
 
