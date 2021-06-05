@@ -3,5 +3,6 @@
 export(cleaneR_string)
 export(count_percent)
 export(count_percent_demo)
+export(mean_sd)
 export(num_unique_pt)
 export(unique_pt)

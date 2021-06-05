@@ -16,7 +16,8 @@ RoxygenNote: 7.1.1
 Suggests:
     testthat
 Imports: 
-    dplyr, 
-    stringr, 
-    magrittr, 
-    rlang
+    dplyr,
+    stringr,
+    magrittr,
+    rlang,
+    base
