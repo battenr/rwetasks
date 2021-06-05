@@ -1,11 +1,11 @@
-# String Cleaning (that time of year)
+# Cleaning Strings
 
-#' Cleaning Strings
+#' Clean a String, trim whitespace and all lowercase
+#' @importFrom magrittr %>%
+#' @param x a vector
 #'
-#' @param x # variable x
+#' @return vector x, in all lowercase and with whitespace trimmed
 #'
-#' @return # variable x
-
 cleaneR_string <- function(x){
   x %>%
     stringr::str_to_lower() %>% # converts string to lowercase

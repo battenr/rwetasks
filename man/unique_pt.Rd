@@ -2,15 +2,18 @@
 % Please edit documentation in R/counts.R
 \name{unique_pt}
 \alias{unique_pt}
-\title{Select only unique patient IDs}
+\title{Unique Patients IDs}
 \usage{
 unique_pt(df, id)
 }
 \arguments{
-\item{df}{dataframe or tibble}
+\item{df}{dataframe, or tibble}
 
-\item{id}{patient id}
+\item{id}{patient identifier}
+}
+\value{
+dataframe of unique patient identifiers
 }
 \description{
-Select only unique patient IDs
+Unique Patients IDs
 }

@@ -1,20 +1,18 @@
 # Calculating Descriptive Stats
 
-# Calculating n and % for a variable ----
-
-#' Calculate n and % of each group in a variable
+#' Calculate count and percent for variables
 #'
-#' @param df # a dataframe
-#' @param x # variable you want to group by
+#' @param df a dataframe or tibble
+#' @param x  variable to get count and percent of
 #'
-
+#' @return a dataframe with number and percent of each group
 count_percent <- function(df, x){
 
-  x <- enquo(x)
+  x <- rlang::enquo(x)
 
   n.df <- nrow(df)
 
-  df %>%
+  df.out <- df %>%
     dplyr::group_by(
       !!x
     ) %>%
@@ -25,22 +23,24 @@ count_percent <- function(df, x){
     ) %>%
     dplyr::slice(1) %>%
     dplyr::arrange(
-      desc(n)
+      dplyr::desc(n)
     )
+
+  return(df.out)
 }
 
-# Calculating n and % for demographic characteristics ----
+# Calculating n and % for demographic characteristics
 
-#' Calculate n and % for unique pt ids
+#' Calculate count and percent for unique participant ids
 #'
-#' @param df # dataframe
-#' @param x # variable you want to group by
-#' @param pt_id # participant id
+#' @param df a dataframe or tibble
+#' @param x variable x
+#' @param pt_id patient identifier
 #'
-
+#' @return a dataframe with number and percent of each group
 count_percent_demo <- function(df, x, pt_id){
-  x <- enquo(x)
-  pt_id <- enquo(pt_id)
+  x <- rlang::enquo(x)
+  pt_id <- rlang::enquo(pt_id)
 
   df.unique <- df %>%
     dplyr::distinct(
@@ -49,7 +49,7 @@ count_percent_demo <- function(df, x, pt_id){
 
   n.df <- nrow(df.unique)
 
-  df %>%
+  df.out <- df %>%
     dplyr::distinct(
       !!pt_id,
       .keep_all = TRUE
@@ -64,6 +64,8 @@ count_percent_demo <- function(df, x, pt_id){
     ) %>%
     dplyr::slice(1) %>%
     dplyr::arrange(
-      desc(n)
+      dplyr::desc(n)
     )
+
+  return(df.out)
 }

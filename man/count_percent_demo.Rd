@@ -2,17 +2,20 @@
 % Please edit documentation in R/summary.R
 \name{count_percent_demo}
 \alias{count_percent_demo}
-\title{Calculate n and \% for unique pt ids}
+\title{Calculate count and percent for unique participant ids}
 \usage{
 count_percent_demo(df, x, pt_id)
 }
 \arguments{
-\item{df}{dataframe}
+\item{df}{a dataframe or tibble}
 
-\item{x}{variable you want to group by}
+\item{x}{variable x}
 
-\item{pt_id}{participant id}
+\item{pt_id}{patient identifier}
+}
+\value{
+a dataframe with number and percent of each group
 }
 \description{
-Calculate n and \% for unique pt ids
+Calculate count and percent for unique participant ids
 }

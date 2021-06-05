@@ -2,15 +2,18 @@
 % Please edit documentation in R/summary.R
 \name{count_percent}
 \alias{count_percent}
-\title{Calculate n and \% of each group in a variable}
+\title{Calculate count and percent for variables}
 \usage{
 count_percent(df, x)
 }
 \arguments{
-\item{df}{a dataframe}
+\item{df}{a dataframe or tibble}
 
-\item{x}{variable you want to group by}
+\item{x}{variable to get count and percent of}
+}
+\value{
+a dataframe with number and percent of each group
 }
 \description{
-Calculate n and \% of each group in a variable
+Calculate count and percent for variables
 }

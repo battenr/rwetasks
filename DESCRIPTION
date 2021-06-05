@@ -5,11 +5,14 @@ Authors@R:
     person(given = "Ryan",
            family = "Batten",
            role = c("aut", "cre"),
-           email = "ryan.batten@mun.ca",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Helps to assist with common tasks associated with real-world evidence (RWE) projects
+           email = "ryan.batten@mun.ca")
+Description: Helps to assist with common tasks associated with real-world evidence (RWE) projects.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports: 
+    magrittr,
+    rlang,
+    dplyr,
+    stringr

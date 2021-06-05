@@ -2,15 +2,18 @@
 % Please edit documentation in R/counts.R
 \name{num_unique_pt}
 \alias{num_unique_pt}
-\title{Counts number of Unique Pts}
+\title{Number of Unique Patients}
 \usage{
 num_unique_pt(df, id)
 }
 \arguments{
-\item{df}{a dataframe or tibble}
+\item{df}{dataframe, or tibble.}
 
-\item{id}{patient id}
+\item{id}{patient identifier}
+}
+\value{
+number of unique patient identifiers
 }
 \description{
-Counts number of Unique Pts
+Number of Unique Patients
 }

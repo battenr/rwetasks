@@ -2,16 +2,16 @@
 % Please edit documentation in R/string_cleaning.R
 \name{cleaneR_string}
 \alias{cleaneR_string}
-\title{Cleaning Strings}
+\title{Clean a String, trim whitespace and all lowercase}
 \usage{
 cleaneR_string(x)
 }
 \arguments{
-\item{x}{variable x}
+\item{x}{a vector}
 }
 \value{
-variable x
+vector x, in all lowercase and with whitespace trimmed
 }
 \description{
-Cleaning Strings
+Clean a String, trim whitespace and all lowercase
 }

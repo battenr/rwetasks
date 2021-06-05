@@ -1,27 +1,31 @@
-#' Counts number of Unique Pts
-#'
-#' @param df # a dataframe or tibble
-#' @param id # patient id
-#'
+# Calculating counts and percentages
 
+
+#' Number of Unique Patients
+#' @param df dataframe, or tibble.
+#' @param id patient identifier
+#'
+#' @return  number of unique patient identifiers
 num_unique_pt <- function(df, id) {
-  id <- enquo(id)
+  id <- rlang::enquo(id)
 
   df %>%
     dplyr::distinct(
       !!id
     ) %>%
-    count()
+    dplyr::count()
 }
 
-#' Select only unique patient IDs
+
+
+#' Unique Patients IDs
+#' @param df dataframe, or tibble
+#' @param id patient identifier
 #'
-#' @param df # dataframe or tibble
-#' @param id # patient id
-#'
+#' @return dataframe of unique patient identifiers
 
 unique_pt <- function(df, id) {
-  id <- enquo(id)
+  id <- rlang::enquo(id)
 
   df.new <- df %>%
     dplyr::distinct(
