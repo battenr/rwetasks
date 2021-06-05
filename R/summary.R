@@ -6,6 +6,7 @@
 #' @param x  variable to get count and percent of
 #'
 #' @return a dataframe with number and percent of each group
+#' @export
 count_percent <- function(df, x){
   require(magrittr)
 

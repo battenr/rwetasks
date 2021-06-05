@@ -1,24 +1,63 @@
-# Real-World Evidence (RWE) Tasks: rwetasks
 
-A package for working with large datasets such as real-world data (RWD). Includes functions for calculating number of individuals and 
-percentage, for different variables (ex: demographic variables, such as age or sex). Other functions include: cleaning a string, and calculating number of 
-unique individuals in a dataset. 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-Currently a work in progress (WIP)
+# rwetasks
 
-# Packages used in this repository:
-- dplyr (Wickham et al., 2021)
-- rlang (Henry & Wickham, 2020)
-- magrittr (Bache & Wickham, 2020)
-- stringr (Wickham, 2019)
+<!-- badges: start -->
 
-# Installation
+<!-- badges: end -->
 
-- the latest development version from github: 
+rwetasks has simple functions for performing common tasks, such as
+caluclating the number (%) of people in each age group. It was built
+with beginning R users in mind. Experienced R users can already do
+everything covered here but with rwetasks they can do it easily and
+focus on the fun stuff\!
 
-```{r}
-install.packages("devtools")
-devtools::install("battenr/rwetasks")
+## Installation
+
+You can install the released version of rwetasks from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("rwetasks")
 ```
 
+And the development version from [GitHub](https://github.com/) with:
 
+``` r
+# install.packages("devtools")
+devtools::install_github("battenr/rwetasks")
+```
+
+## Using rwetasks
+
+Each function is described by:
+
+``` r
+library(rwetasks)
+## basic example code
+```
+
+What is special about using `README.Rmd` instead of just `README.md`?
+You can include R chunks like so:
+
+``` r
+summary(cars)
+#>      speed           dist       
+#>  Min.   : 4.0   Min.   :  2.00  
+#>  1st Qu.:12.0   1st Qu.: 26.00  
+#>  Median :15.0   Median : 36.00  
+#>  Mean   :15.4   Mean   : 42.98  
+#>  3rd Qu.:19.0   3rd Qu.: 56.00  
+#>  Max.   :25.0   Max.   :120.00
+```
+
+You’ll still need to render `README.Rmd` regularly, to keep `README.md`
+up-to-date.
+
+You can also embed plots, for example:
+
+<img src="man/figures/README-pressure-1.png" width="100%" />
+
+In that case, don’t forget to commit and push the resulting figure
+files, so they display on GitHub\!
