@@ -11,3 +11,7 @@ Currently a work in progress (WIP)
 - rlang (Henry & Wickham, 2020)
 - magrittr (Bache & Wickham, 2020)
 - stringr (Wickham, 2019)
+
+# To install
+
+devtools::install_github("battenr/rwetasks")
