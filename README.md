@@ -14,7 +14,7 @@ Currently a work in progress (WIP)
 
 # Installation
 
-- the latest development versions from github: 
+- the latest development version from github: 
 
 ```{r}
 install.packages("devtools")
