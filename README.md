@@ -8,21 +8,16 @@
 <!-- badges: end -->
 
 rwetasks has simple functions for performing common tasks, such as
-caluclating the number (%) of people in each age group. It was built
-with beginning R users in mind. Experienced R users can already do
-everything covered here but with rwetasks they can do it easily and
-focus on the fun stuff\!
+calculating the number (and proportion) of people in each age group. It
+was built with beginning R users in mind. Experienced R users can
+already do everything covered here but with rwetasks they can do it
+easily and focus on the fun stuff\!
+
+Status: Currently in development, not ready for prime time
 
 ## Installation
 
-You can install the released version of rwetasks from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("rwetasks")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+The development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -31,33 +26,20 @@ devtools::install_github("battenr/rwetasks")
 
 ## Using rwetasks
 
-Each function is described by:
+### count\_percent
+
+count\_percent provides a way to quickly calculate the number (n) and
+proportion of each value of a variable.
 
 ``` r
 library(rwetasks)
-## basic example code
+rwetasks::count_percent(mtcars, gear)
+#> Loading required package: magrittr
+#> # A tibble: 3 x 3
+#> # Groups:   gear [3]
+#>    gear     n  prop
+#>   <dbl> <int> <dbl>
+#> 1     3    15 0.469
+#> 2     4    12 0.375
+#> 3     5     5 0.156
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
