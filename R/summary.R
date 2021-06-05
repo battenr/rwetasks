@@ -1,6 +1,6 @@
-# Calculating Descriptive Stats
+# Calculating counts and proportions
 
-#' Calculate count and percent for variables
+#' Calculate count and proportion for variables
 #'
 #' @param df a dataframe or tibble
 #' @param x  variable to get count and percent of
