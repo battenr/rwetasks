@@ -8,7 +8,6 @@
 #' @return  number of unique patient identifiers
 #' @export
 num_unique_pt <- function(df, id) {
-  require(magrittr)
 
   id <- rlang::enquo(id)
 
@@ -30,7 +29,6 @@ num_unique_pt <- function(df, id) {
 #' @return dataframe of unique patient identifiers
 #' @export
 unique_pt <- function(df, id) {
-  require(magrittr)
 
   id <- rlang::enquo(id)
 

@@ -10,7 +10,6 @@ library(dplyr)
 #' @return vector x, in all lowercase and with whitespace trimmed
 #' @export
 cleaneR_string <- function(x){
-  require(magrittr)
 
   x %>%
     stringr::str_to_lower() %>% # converts string to lowercase

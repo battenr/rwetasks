@@ -29,7 +29,7 @@ devtools::install_github("battenr/rwetasks")
 ### count\_percent
 
 count\_percent provides a way to quickly calculate the number (n) and
-proportion of each value of a variable.
+proportion of each value of a variable, arranged by proportion.
 
 ``` r
 library(rwetasks)
