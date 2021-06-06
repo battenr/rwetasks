@@ -1,40 +1,40 @@
 # Calculating counts and percentages
 
-#' Number of Unique Patients
+#' Number of Unique Values
 #'
 #' @param df dataframe, or tibble.
-#' @param id patient identifier
+#' @param x vector / variable that you want unique number of (i.e, patient identifier, age group, sex)
 #'
-#' @return  number of unique patient identifiers
+#' @return  number of unique values
 #' @export
-num_unique_pt <- function(df, id) {
+num_unique <- function(df, x) {
 
-  id <- rlang::enquo(id)
+  x <- rlang::enquo(x)
 
   df %>%
     dplyr::distinct(
-      !!id
+      !!x
     ) %>%
     dplyr::count()
 }
 
 
 
-#' Unique Patients IDs
+#' Unique Values
 
 #'
 #' @param df dataframe, or tibble
-#' @param id patient identifier
+#' @param x vector / variable that you want unique number of (i.e, patient identifier, age group, sex)
 #'
-#' @return dataframe of unique patient identifiers
+#' @return dataframe of unique values (i.e, patient identifiers)
 #' @export
-unique_pt <- function(df, id) {
+unique_values <- function(df, x) {
 
-  id <- rlang::enquo(id)
+  x <- rlang::enquo(x)
 
   df.new <- df %>%
     dplyr::distinct(
-      !!id
+      !!x
     )
 
   return(df.new)
