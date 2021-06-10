@@ -13,7 +13,7 @@ was built with beginning R users in mind. Experienced R users can
 already do everything covered here but with rwetasks they can do it
 easily and focus on the fun stuff\!
 
-Status: Currently in development, not ready for prime time
+Status: Currently in development aka not ready for prime time
 
 ## Installation
 
@@ -32,9 +32,18 @@ count\_percent provides a way to quickly calculate the number (n) and
 proportion of each value of a variable, arranged by proportion.
 
 ``` r
+library(tidyverse)
+#> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+#> ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
+#> ✓ tibble  3.1.2     ✓ dplyr   1.0.6
+#> ✓ tidyr   1.1.3     ✓ stringr 1.4.0
+#> ✓ readr   1.4.0     ✓ forcats 0.5.1
+#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+#> x dplyr::filter() masks stats::filter()
+#> x dplyr::lag()    masks stats::lag()
 library(rwetasks)
+
 rwetasks::count_percent(mtcars, gear)
-#> Loading required package: magrittr
 #> # A tibble: 3 x 3
 #> # Groups:   gear [3]
 #>    gear     n  prop

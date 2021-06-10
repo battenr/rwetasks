@@ -2,7 +2,7 @@
 % Please edit documentation in R/summary.R
 \name{count_percent}
 \alias{count_percent}
-\title{Calculate count and percent for variables}
+\title{Calculate count and proportion for variables}
 \usage{
 count_percent(df, x)
 }
@@ -15,5 +15,5 @@ count_percent(df, x)
 a dataframe with number and percent of each group
 }
 \description{
-Calculate count and percent for variables
+Calculate count and proportion for variables
 }
