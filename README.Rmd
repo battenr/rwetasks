@@ -43,4 +43,15 @@ library(rwetasks)
 rwetasks::count_percent(mtcars, gear)
 ```
 
+### count_percent_demo
+
+count_percent_demo provides a way to quickly calculate the number (n) and proportion of each value of a variable, when you have multiple measures per participants (i.e., if you have longitudinal data, but want to calculate proportion of females for participants). 
+
+```{r count_percent_demo example}
+library(tidyverse)
+library(rwetasks)
+
+rwetasks::count_percent_demo(iris, Species, Petal.Width)
+```
+
 
