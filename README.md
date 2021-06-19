@@ -8,12 +8,16 @@
 <!-- badges: end -->
 
 rwetasks has simple functions for performing common tasks, such as
-calculating the number (and proportion) of people in each age group. It
-was built with beginning R users in mind. Experienced R users can
-already do everything covered here but with rwetasks they can do it
-easily and focus on the fun stuff\!
+calculating the number (and proportion) of people: in each age group,
+receiving a specific treatment, annualizing healthcare costs and how
+different inclusion criteria affects the sample size. It was built for
+anyone working with real-world data (RWDD) in mind, however experienced
+R users can already do everything covered here. rwetasks is aimed at
+improving speed of simple tasks, so you can use your brain power for the
+more complex stuff\!
 
-Status: Currently in development aka not ready for prime time
+Status: Currently in development, not officially released yet (aka not
+ready for prime time)
 
 ## Installation
 
@@ -37,7 +41,7 @@ library(tidyverse)
 #> ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
 #> ✓ tibble  3.1.2     ✓ dplyr   1.0.6
 #> ✓ tidyr   1.1.3     ✓ stringr 1.4.0
-#> ✓ readr   1.4.0     ✓ forcats 0.5.1
+#> ✓ readr   1.4.0     ✓ forcats 0.5.0
 #> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
