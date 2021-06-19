@@ -18,8 +18,6 @@ num_unique <- function(df, x) {
     dplyr::count()
 }
 
-
-
 #' Unique Values
 
 #'
