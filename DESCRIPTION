@@ -20,4 +20,5 @@ Imports:
     stringr,
     magrittr,
     rlang,
-    base
+    base,
+    stats
