@@ -31,6 +31,31 @@ median_iqr <- function(x) {
   return(df.out)
 }
 
+#' Mean by group
+#'
+#' @param df a dataframe
+#' @param x a vector / variable to calculate the mean and SD for
+#' @param grouping_var a vector/variable to group by
+#'
+#' @return the mean and sd for each group of the specified variable
+#' @export
+mean_by_group <- function(df, x, grouping_var) {
+  x <- enquo(x)
+  grouping_var <- enquo(grouping_var)
+
+  df.out <- df %>%
+    dplyr::group_by(
+      !!grouping_var
+    ) %>%
+    dplyr::summarise(
+      mean = mean(!!x),
+      sd = sd(!!x)
+
+    )
+
+  return(df.out)
+}
+
 #' Calculate count and proportion for variables
 #'
 #' @param df a dataframe or tibble
