@@ -48,9 +48,32 @@ mean_by_group <- function(df, x, grouping_var) {
       !!grouping_var
     ) %>%
     dplyr::summarise(
-      mean = mean(!!x),
-      sd = sd(!!x)
+      mean = base::round(base::mean(!!x), 2),
+      sd = base::round(stats::sd(!!x), 2)
+    )
 
+  return(df.out)
+}
+
+#' Median by group
+#'
+#' @param df a dataframe
+#' @param x a vector / variable to calculate the median and IQR for
+#' @param grouping_var a vector/variable to group by
+#'
+#' @return the median and IQR for each group of the specified variable
+#' @export
+median_by_group <- function(df, x, grouping_var) {
+  x <- enquo(x)
+  grouping_var <- enquo(grouping_var)
+
+  df.out <- df %>%
+    dplyr::group_by(
+      !!grouping_var
+    ) %>%
+    dplyr::summarise(
+      median = base::round(stats::median(!!x), 2),
+      IQR = base::round(stats::IQR(!!x), 2)
     )
 
   return(df.out)
