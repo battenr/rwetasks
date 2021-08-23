@@ -5,7 +5,7 @@
 #' @param sample_size_drawn number of samples to draw
 #' @param replace_response sample with replacement. By default, TRUE
 #'
-#' @return
+#' @return returns a dataframe, resampled n times
 #' @export
 resample_data <- function(times_to_resample, df.vector, sample_size_drawn, replace_response = TRUE){
   resampled <- base::replicate(times_to_resample,
@@ -20,4 +20,21 @@ resample_data <- function(times_to_resample, df.vector, sample_size_drawn, repla
     varhandle::unfactor()
 
   return(resampled)
+}
+
+#' Counts and Proportions of Resampled Data
+#'
+#' @param df a dataframe containing resampled data
+#' @param sample_size_drawn size of the sample that was drawn
+#'
+#' @return returns dataframe with counts and proportions for each sample drawn
+#' @export
+resample_count <- function(df, sample_size_drawn){
+  df.counts <- df %>%
+    purrr::map_df(~count(data.frame(x = .x), x), .id = "var") %>%
+    dplyr::mutate(
+      prop = n / sample_size_drawn
+    )
+
+  return(df.counts)
 }
