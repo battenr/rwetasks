@@ -32,6 +32,27 @@ devtools::install_github("battenr/rwetasks")
 ```
 ## Using rwetasks
 
+### mean_by_group
+
+mean_by_group provides a way to calculate the mean for each group. Can also be used
+across a dataframe when you want to calculate mean(sd) for each group for every
+variable
+
+```{r mean_by_group example}
+library(tidyverse)
+library(rwetasks)
+
+rwetasks::mean_by_group(mtcars, mpg, gear)
+
+# Can also use across a dataframe like so
+
+mtcars %>%
+  purrr::map(
+    ~mean_by_group(mtcars, .x, gear)
+  )
+```
+
+
 ### count_percent
 
 count_percent provides a way to quickly calculate the number (n) and proportion of each value of a variable, arranged by proportion. 
