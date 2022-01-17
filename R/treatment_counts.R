@@ -38,3 +38,14 @@ num_pts_trt <- function(df, x, value, id){ # number of patients with a unique tr
       !!id
     )
 }
+
+unique_trt <- function(df, x, id) {
+  x <- enquo(x)
+  id <- enquo(x)
+
+  df_new <- df %>%
+    dplyr::group_by(!!x, !!id) %>%
+    dplyr::slice(1)
+
+  return(df_new)
+}
